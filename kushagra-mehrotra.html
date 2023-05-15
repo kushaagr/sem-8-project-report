@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project Report (Semester 7)</title>
+</head>
+<body>
+    <section class="front-page">
+        <h1>Leave Management System</h1>
+        <h3>A MINOR PROJECT REPORT</h3>
+        <h3>Submitted in partial fulfillment of the requirement for the 
+            award of Degree of Master of Computer Applicaitons</h3>
+        <h4>Submitted to</h4>
+        <img src="img/rgpv-logo.png" alt="Logo of Rajiv Gandhi Prodyokigi Vishwavidyalaya (university)">
+        <h3>RAJIV GANDHI PRODYOGIKI VISHWAVIDYALAYA, BHOPAL (M.P.)</h3>
+        <h4>Submitted by:</h4>
+
+        <h3>Mr. Kushagra Mehrotra <br>
+        Enrollment No. 0827CA19DD18</h3>
+
+        <h4>Under the supervision of</h4>
+        <h3><u>Dr. Nidhi Dahale</u></h3>
+        <img src="img/acropolis-named-logo.jpg" alt="Logo of Acropolis college (Indore) with its moto">
+        <h3>MASTER OF COMPUTER APPLICATIONS</h3>
+        <h3>ACROPOLIS INSTITUTE OF TECHNOLOGY & RESEARCH, INDORE</h3>
+        <h3>SESSON - 2022-23</h3>
+
+    </section>
+
+    <section class="certificate">
+        <h1>Department of Computer Applications <br>
+        AITR, Indore</h1>
+
+        <h2>BONAFIDE CERTIFICATE</h2>
+
+        <p>This is to certify that Major Project entitled <strong>"Leave management system"</strong>
+        being submitted my <strong>Mr. Kushagra Mehrotra (0827CA19DD18)</strong> for 
+        partial fulfillment of the requirement for the award of degree of 
+        <strong>Master of Computer Applications</strong> to <strong>Rajiv Gandhi Proudyogiki
+        Vishwavidyalaya, Bhopal (M.P.)</strong> during the academic year 2022-2023 is a 
+        record of bonafide piece of work, carried out by the student under my supervision
+        and guidance in the <strong>Departmment of Computer Applications, AITR, Indore.</strong></p>
+
+        <div class="sign-block">
+            <p>
+                <strong>Prof. Geeta Santosh</strong>
+                <br>
+                Professor & HOD, MCA
+            </p>
+        </div>
+        <div class="sign-block">
+            <p>
+                <strong>(Internal Examiner)
+                <br>
+                Date: 08 December, 2022</strong>
+            </p>
+            <p>
+                <strong>(External Examiner)
+                <br>
+                Date: 08 December, 2022</strong>
+            </p>
+        </div>
+    </section>
+    
+    <section class="page">
+        <div class="header">
+            <div class="header__institute">
+                <img src="img/acropolis-logo.png" class="header__institute-logo" alt="Logo of Acropolis">
+                <h3 class="header__institute-name">
+                ACROPOLIS INSTITUTE OF TECHNOLOGY & RESEARCH, INDORE</h3>
+            </div>
+            <div class="header__department">(Faculty of Computer Applications)</div>
+        </div>
+        <h2>Abstract </h2>
+        <p>The purpose of the project is to bring leave data to one central place. 
+        In current system, leaves count of a faculty is stored in Excel file, their 
+        per-day leave is marked in a physical sheet, calculation for total attendance for a 
+        month is also done on paper, and application to get a leave is sent via mail.
+
+        The current system has data spread across various places, but with today's technology
+        and in-house expertise this problem can be solved. 
+
+        We propose an online leave centralization system where faculties can send application,
+        and management can approve it, and account for it.
+
+        This system streamlines the leave management process.</p>
+    </section>
+
+    <section class="page">
+        <div class="header">
+            <div class="header__institute">
+                <img src="img/acropolis-logo.png" class="header__institute-logo" alt="Logo of Acropolis">
+                <h3 class="header__institute-name">
+                    ACROPOLIS INSTITUTE OF TECHNOLOGY & RESEARCH, INDORE</h3>
+            </div>
+            <div class="header__department">(Faculty of Computer Applications)</div>
+        </div>
+
+        <h2>Acknowledgement</h2>
+        <p>I would like to use this opportunity to extend my heartfelt gratitude to
+        our guide and supervisor of this project, <strong>Dr. Nidhi Dahale</strong> who is reponsible 
+        for letting us explore this idea.</p>
+        <p>I am also thankful to <strong>Geeta Santosh</strong>, Head of Department of
+        Faculty of Computer Applications for cooperation and support to complete this work.
+        I would also like to express my thanks to <strong>Dr. S.C. Sharma</strong> Director
+        AITR Indore for providing necessary facilites. I would also like to convey my thanks to
+        <strong>Prof. Nitin Kulkarni</strong> and staff member <strong>Irfan sir</strong>
+        of Faculty of Computer Applications. Thanks are due for all the staff members and 
+        lab staff of Faculty of Computer Applications AITR for providing help and support.</p>
+        <div class="student-info">
+            <strong>
+                Kushagra Mehrotra <br><br><br>
+                0827CA19DD18
+            </strong>
+        </div>
+    </section>
+
+<section class="page">
+    <h2 class="main-heading">Table of Contents</h2>
+    <table class="bordered-table">
+        <thead>
+            <tr>
+                <th>Sr. No </th>
+                <th>Content </th>
+                <th>Page No </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Title Page </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Bonafide Certificate </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Abstract </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Acknowledgement </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Table of Contents </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>List of Figures </td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="main-heading">1.</th>
+                <th class="main-heading">Introduction (Chapter 1)</th>
+                <th class="main-heading"></th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>1.1 Brief description</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>1.2 Objectives</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>1.3 Methodology / Planning of work</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="main-heading">2.</th>
+                <th class="main-heading">System Analysis (Chapter 2)</th>
+                <th class="main-heading"></th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>2.1 Feasibility study</td>
+                <td></td>
+            </tr>
+            <tr class="space-column">
+                <td></td>
+                
+                <td><span>&nbsp</span> 2.1.1 Technical feasibility</td>
+                <td></td>
+            </tr>
+            <tr class="space-column">
+                <td></td>
+                
+                <td><span>&nbsp</span> 2.1.2 Economic feasibility</td>
+                <td></td>
+            </tr>
+            <tr class="space-column">
+                <td></td>
+                
+                <td><span>&nbsp</span> 2.1.3 Behavioural feasibility</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>2.2 Drawbacks</td>
+                <td></td>
+            </tr>
+            <tr class="space-column">
+                <td></td>
+                
+                <td><span>&nbsp</span> 2.2.1 Identification of need</td>
+                <td></td>
+            </tr>
+            <tr class="space-column">
+                <td></td>
+                
+                <td><span>&nbsp</span> 2.2.2 Limitations of existing system</td>
+                <td></td>
+            </tr>
+            <tr class="space-column">
+                <td></td>
+                
+                <td><span>&nbsp</span> 2.2.3 Proposed system</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="main-heading">3.</th>
+                <th class="main-heading">Testing (Chapter 3)</th>
+                <th class="main-heading"></th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>3.1 Testing methodology</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>3.2 Test cases</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="main-heading">4.</th>
+                <th class="main-heading">CONCLUSION (Chapter 4)</th>
+                <th class="main-heading"></th>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section class="page">
+        <h2 class="main-heading">List of Figures</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fig No. </th>
+                    <th>Description of Figure </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fig 1</td>
+                    <td>Wireframe of faculty login</td>
+                </tr>
+                <tr>
+                    <td>Fig 2</td>
+                    <td>Wireframe of application approval page</td>
+                </tr>
+                <tr>
+                    <td>Fig 3</td>
+                    <td>Wireframe of leaves account for Admin</td>
+                </tr>
+                <tr>
+                    <td>Fig 4</td>
+                    <td>Wireframe of faculty details page</td>
+                </tr>
+                <tr>
+                    <td>Fig 5</td>
+                    <td>DFD level 0</td>
+                </tr>
+                <tr>
+                    <td>Fig 6</td>
+                    <td>DFD level 1</td>
+                </tr>
+                <tr>
+                    <td>Fig 7</td>
+                    <td>DFD level 2</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="page">
+        <h2>Introduction</h2>
+        <ol>
+            <li>
+                <span class="main-heading">Brief Description</span>
+                <p> The “Leave  Management System” has been developed to override  the  problems
+                prevailing  in the practicing manual system. This software   is supported to 
+                eliminate and in some cases reduce the hardships faced by this existing system. 
+                Moreover this system is designed for the particular need of the company to 
+                carry out operations in a smooth and effective manner.
+                The application is reduced as much as possible to possible to avoid errors 
+                while entering the data. It also provides error message while entering invalid 
+                data. It also provides error message while entering invalid data. No formal 
+                knowledge is needed for the user to use this system. Thus by this all it 
+                proves it is user friendly. Leave Management System, as described above, can 
+                lead to error free, secure, reliable and fast management system. It can assist 
+                the user to concentrate in their other activities rather to concentrate on the 
+                record keeping. Thus it will help organization in better utilization of 
+                resources. </p>
+            </li>
+            <li><span class="main-heading">Objectives</span>
+                <ol>
+                    <li>To manage the leave details of faculties.</li>
+                    <li>To make leave data transparent to faculties.</li>
+                    <li>To track leaves and make accounting them simpler.</li>
+                </ol>
+            </li>
+            <li><span class="main-heading">Methodology / Planning of work</span>
+                <ol>
+                    <li>Gather details on what data is accounted and how it is used.</li>
+                    <li>Inquire current system details</li>
+                    <li>List edge cases</li>
+                    <li>List roadblocks</li>
+                    <li>Find solution to roadblocks</li>
+                    <li>Prepare a working prototype</li>
+                    <li>Finalize and test code</li>
+                </ol>
+            </li>
+        </ol>
+
+    </section>
+
+    <section class="page">
+        <h2>System Analysis</h2>
+        <ol>
+            <li> <span class="main-heading">Feasibility Study</span>
+                <ol>
+                    <li>
+                        <span class="sub-heading">Technical Feasibility</span>
+                        <p>This included the study of function, performance and constraints 
+                        that may affect the ability to achieve an acceptable system. For 
+                        this feasibility study, we studied complete functionality to be 
+                        provided in the system, as described in the System Requirement 
+                        Specification (SRS), and checked if everything was possible using 
+                        different type of frontend and backend platforms.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="sub-heading">Economic Feasibility</span>
+                        <p>
+                        This is a very important aspect to the considered while developing a 
+                        project. We decided the technology based on minimum possible cost 
+                        factor.
+                        <ol class="roman-list">
+                            <li>All hardware and software cost has to be borne by the 
+                            organization.</li>
+                            <li>Overall we have estimated that the benefits the organization 
+                            is going to receive from the proposed system will surely overcome 
+                            the initial costs and the later on running cost for system.</li>
+                        </ol>
+                        </p>
+                    </li>
+                    <li>
+                        <span class="sub-heading">Behavioural feasibility</span>
+                        <p>No doubt the proposed system is fully GUI based that is very user 
+                        friendly and all inputs to be taken all self-explanatory even to a 
+                        layman. Besides, a proper training has been conducted to let know 
+                        the essence of the system to the users so that they feel comfortable 
+                        with new system. As far our study is concerned the clients are 
+                        comfortable and happy as the system has cutdown their loads and 
+                        doing.
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </section>
+
+    <section class="page">
+        <div class="header"></div>
+        <!-- <ol start="2" class="continue-page"> -->
+        
+        <!--  'start' attribute is not working. The reason has to do something with
+                counter-reset property used in css.
+            Anyway, to resolve the issue class start-from-2 is applied. -->
+        <ol start="2" class="start-from-2">
+            <!-- <span class="main-heading">2 Drawback of Existing System</span> -->
+            <li><span class="main-heading">Drawback of Existing System</span>
+                <!-- <li class="disable-list-style"></li> -->
+                <!-- <li class="disable-list-style"> -->
+                <ol>
+                    <li class="sub-heading"> Identification of need
+                        <span class="sub-heading">existing system</span>
+                        <p>In the existing manual system of leave management in educational 
+                        institutions, if the members of the faculty need to apply for a 
+                        leave, they are supposed  to submit a leave application to the HOD 
+                        concerned. After receiving consent from the HOD concerned, the 
+                        applicant needs to submit the leave application to the principal for 
+                        further approval. If the HOD or the Principal is not, then the 
+                        member of faculty can’t get consent for their leave application. 
+                        Also the retrieval of information like the number f leave available 
+                        becomes a cumbersome task as it requires scanning of the entire 
+                        record.
+                        </p>
+                        
+                        <li class="sub-heading">Limitation of Existing system   
+                            <ol class="roman-list">
+                                <li>It requires a lot of efforts.</li>
+                                <li>It consume more time.</li>
+                                <li>It requires a lot of paper works.</li>
+                                <li>No security for data.</li>
+                                <li>Unavailability of required authorities.</li>
+                                <li>Report generation is complicated.</li>
+                            </ol>
+                        </li>
+                    </li>
+                    <li>
+                        <span class="sub-heading">Proposed System</span>
+                        <p>By considering the pros and cons of the existing system, this 
+                        application has been developed to cover all the features and 
+                        overcomes the cons of the existing system. In the proposed system of 
+                        Online Leave Management System, the registered members of faculty 
+                        can simply generates a leave request anywhere and anytime providing 
+                        the required details. The leave request thus generated is sent to 
+                        the HOD concerned for consideration which can be approved or 
+                        rejected. In case of approval by the HOD concerned. The leave 
+                        request is automatically forwarded to the Principal can access he 
+                        leave applications delivered to them anywhere and anytime. Also the 
+                        members of faculty can view their leave account without going 
+                        through the entire record. By availing the benefits of this app, 
+                        members of faculty and HOD can generate leave requests and get them 
+                        approved even in the case of absence of required authorities. This 
+                        project enhances security to the leave records of faculties.  
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </section>
+
+    <section class="page">
+        <figure>
+            <img src="img/faculty-login-view.png" alt="Wireframe of faculty login">
+            <figcaption>Faculty login</figcaption>
+        </figure>
+    </section>
+    <section class="page">
+        <figure>
+            <img src="img/hod-approval-view.png" alt="Wireframe of application approval page">
+            <figcaption>Approval page (HOD)</figcaption>
+        </figure>
+    </section>
+    <section class="page">
+        <figure>
+            <img src="img/admin-data-view.png" alt="Wireframe of leaves account for Admin">
+            <figcaption>Leave account page (Admin)</figcaption>
+        </figure>
+    </section>
+    <section class="page">
+        <figure>
+            <img src="img/admin-details-view.png" alt="Wireframe of faculty details page">
+            <figcaption>Faculty details</figcaption>
+        </figure>
+    </section>
+
+    <section class="page">
+        <figure>
+            <img src="img/dfd-level-0.png" alt="Data-flow diagram level-0">
+            <figcaption>Data-flow diagram level-0</figcaption>
+        </figure>
+    </section>
+    <section class="page">
+        <figure>
+            <img src="img/dfd-level-1.png" alt="Data-flow diagram level-1">
+            <figcaption>Data-flow diagram level-1</figcaption>
+        </figure>
+    </section>
+    <section class="page">
+        <figure>
+            <img src="img/dfd-level-2.png" alt="Data-flow diagram level-2">
+            <figcaption>Data-flow diagram level-2</figcaption>
+        </figure>
+    </section>
+
+    <section class="page">
+        <h2>Testing</h2>
+        <ol>
+            <li>Testing strategy: Manual testing was done to build the prototype.</li>
+            <li>Tests</li>
+            <ol>
+                <li>Logging-in with correct credentials</li>
+                <li>Logging-in with incorrect credentials</li>
+                <li>Applying for Leave</li>
+                <li>What if the number of leave days entered is 0 or negative while 
+                    applying?</li>
+                <li>What if the required number of a leave type is not available 
+                    while applying?</li>
+                <li>Approving a Leave Request (deducts the number of leave days applied for)</li>
+                <li>Rejecting a Leave Request</li>
+                <li>What if the given number of the request's leave type is not available
+                    while approving?</li>
+                <li>What if there are multiple leave requests (in pending) of same 
+                    leave type from the same user, that are individually under limit of the 
+                    available leaves but together they exceed it?</li>
+            </ol>       
+        </ol>
+    </section>
+
+    <section class="page">
+        <h2>Conclusion</h2>
+        <p> The system has completed its first phase: design and prototyping.
+        With design down, the system can now move to final development phase.
+        There are many nuances yet to be thought over but the overall problem and 
+        solution is now concrete.</p>
+        
+        <ol>
+            <li class="main-heading">Future Scope</li>
+            <ol>
+                <li>Deployment over server.</li>
+                <li>Secure login for admin page and HOD page.</li>
+                <li>Government holidays could be fetched from a calendar API 
+                    and leaves like Optional leave can be taken care in automated
+                    fashion.</li>
+            </ol>
+        </ol>
+    </section>
+
+</body>
+</html>
