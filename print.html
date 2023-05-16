@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="3" > -->
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://livejs.com/live.js"></script>
     <title>Project Report (Semester 7)</title>
 </head>
 <body>
     <section class="front-page">
-        <h1>Leave Management System</h1>
+        <h1>Acropolis Event Timeline</h1>
         <h3>A MINOR PROJECT REPORT</h3>
         <h3>Submitted in partial fulfillment of the requirement for the 
             award of Degree of Master of Computer Applicaitons</h3>
@@ -19,6 +21,9 @@
 
         <h3>Mr. Jaivrat Das <br>
         Enrollment No. 0827CA19DD14</h3>
+        <h3>Mr. Kushagra Mehrotra <br>
+        Enrollment No. 0827CA19DD18</h3>
+
 
         <h4>Under the supervision of</h4>
         <h3><u>Dr. Nidhi Dahale</u></h3>
@@ -35,8 +40,9 @@
 
         <h2>BONAFIDE CERTIFICATE</h2>
 
-        <p>This is to certify that Major Project entitled <strong>"Leave management system"</strong>
-        being submitted my <strong>Mr. Jaivrat Das (0827CA19DD14)</strong> for 
+        <p>This is to certify that Major Project entitled <strong>"Acropolis Event Timeline"</strong>
+        being submitted my <strong>Mr. Jaivrat Das (0827CA19DD14)</strong> and 
+        <strong>Mr. Kushagra Mehrotra (0827CA19DD18)</strong> for 
         partial fulfillment of the requirement for the award of degree of 
         <strong>Master of Computer Applications</strong> to <strong>Rajiv Gandhi Proudyogiki
         Vishwavidyalaya, Bhopal (M.P.)</strong> during the academic year 2022-2023 is a 
@@ -54,12 +60,12 @@
             <p>
                 <strong>(Internal Examiner)
                 <br>
-                Date: 08 December, 2022</strong>
+                Date: 20 May, 2023</strong>
             </p>
             <p>
                 <strong>(External Examiner)
                 <br>
-                Date: 08 December, 2022</strong>
+                Date: 20 May, 2023</strong>
             </p>
         </div>
     </section>
@@ -74,18 +80,17 @@
             <div class="header__department">(Faculty of Computer Applications)</div>
         </div>
         <h2>Abstract </h2>
-        <p>The purpose of the project is to bring leave data to one central place. 
-        In current system, leaves count of a faculty is stored in Excel file, their 
-        per-day leave is marked in a physical sheet, calculation for total attendance for a 
-        month is also done on paper, and application to get a leave is sent via mail.
+        <p>The purpose of this project is to create an ever-online system where
+        any faculty can view all the occured activites or events. These events are
+        either ones where students from college participated in any outside event or
+        events which were hosted by students.
 
-        The current system has data spread across various places, but with today's technology
-        and in-house expertise this problem can be solved. 
+        A system which can keep record in a chronological manner, is always 
+        available (online) and provides easy interface to edit and create more 
+        entries.
+        
 
-        We propose an online leave centralization system where faculties can send application,
-        and management can approve it, and account for it.
-
-        This system streamlines the leave management process.</p>
+        </p>
     </section>
 
     <section class="page">
@@ -105,14 +110,15 @@
         <p>I am also thankful to <strong>Geeta Santosh</strong>, Head of Department of
         Faculty of Computer Applications for cooperation and support to complete this work.
         I would also like to express my thanks to <strong>Dr. S.C. Sharma</strong> Director
-        AITR Indore for providing necessary facilites. I would also like to convey my thanks to
-        <strong>Prof. Nitin Kulkarni</strong> and staff member <strong>Irfan sir</strong>
-        of Faculty of Computer Applications. Thanks are due for all the staff members and 
+        AITR Indore for providing necessary facilites. Thanks are due for all the staff members and 
         lab staff of Faculty of Computer Applications AITR for providing help and support.</p>
         <div class="student-info">
             <strong>
                 Jaivrat Das <br><br><br>
-                0827CA19DD14
+                0827CA19DD14 <br><br><br>
+                <br><br><br>
+                Kushagra Mehrotra <br><br><br>
+                0827CA19DD18 <br><br><br>
             </strong>
         </div>
     </section>
@@ -265,32 +271,17 @@
             <tbody>
                 <tr>
                     <td>Fig 1</td>
-                    <td>Wireframe of faculty login</td>
+                    <td>Wireframe of event timeline</td>
                 </tr>
                 <tr>
                     <td>Fig 2</td>
-                    <td>Wireframe of application approval page</td>
+                    <td>Wireframe admin view of timeline</td>
                 </tr>
                 <tr>
                     <td>Fig 3</td>
-                    <td>Wireframe of leaves account for Admin</td>
+                    <td>Wireframe of admin view of timeline when mouse hovers</td>
                 </tr>
-                <tr>
-                    <td>Fig 4</td>
-                    <td>Wireframe of faculty details page</td>
-                </tr>
-                <tr>
-                    <td>Fig 5</td>
-                    <td>DFD level 0</td>
-                </tr>
-                <tr>
-                    <td>Fig 6</td>
-                    <td>DFD level 1</td>
-                </tr>
-                <tr>
-                    <td>Fig 7</td>
-                    <td>DFD level 2</td>
-                </tr>
+
             </tbody>
         </table>
     </section>
@@ -300,26 +291,38 @@
         <ol>
             <li>
                 <span class="main-heading">Brief Description</span>
-                <p> The “Leave  Management System” has been developed to override  the  problems
-                prevailing  in the practicing manual system. This software   is supported to 
-                eliminate and in some cases reduce the hardships faced by this existing system. 
-                Moreover this system is designed for the particular need of the company to 
-                carry out operations in a smooth and effective manner.
-                The application is reduced as much as possible to possible to avoid errors 
-                while entering the data. It also provides error message while entering invalid 
-                data. It also provides error message while entering invalid data. No formal 
-                knowledge is needed for the user to use this system. Thus by this all it 
-                proves it is user friendly. Leave Management System, as described above, can 
-                lead to error free, secure, reliable and fast management system. It can assist 
+                <p>In the current system whenever an inspection body such as AICTE 
+                    requires account of all join-effort put-in by students and college
+                    body, the faculties circulate a spreadsheet to create a list.
+                    The spreadsheet is juggled department-to-department. This creates a
+                    problem of keeping track of spreadsheet updations. The next problem 
+                    faced is with data entry, for which faculties ask students to
+                    give a note on relevant events hosted by their department or their 
+                    participation in off-campus events.
+                </p>
+                <p>To solve such trivial yet cumbersome/inefficient problems, we created
+                    an online web application which keeps track of all the events in
+                    chronological order. This project is titled "Acropolis Event 
+                    Timeline". Any user can view all the recorded events. To edit or
+                    create a new post in the timeline user need to authenticate 
+                    himself/herself. Once authenticated, the user can create, update, or
+                    delete timeline posts. This data is stored in a local database and
+                    so is permanently modified.
+                </p>
+
+                <p> No formal knowledge is needed for the user to use this system. Thus by this all it 
+                proves it is user friendly. Acropolis Event Timeline website, as described above, can 
+                lead to error free, secure, reliable and fast logging system. It can assist 
                 the user to concentrate in their other activities rather to concentrate on the 
                 record keeping. Thus it will help organization in better utilization of 
                 resources. </p>
             </li>
             <li><span class="main-heading">Objectives</span>
                 <ol>
-                    <li>To manage the leave details of faculties.</li>
-                    <li>To make leave data transparent to faculties.</li>
-                    <li>To track leaves and make accounting them simpler.</li>
+                    <li>To create an always available (online) platform to check and post </li>
+                    <li>To make it easy for any faculty to view past events and participation.</li>
+                    <li>To create an easy means of entering and modifying data related to events.</li>
+                    <li>To create a chronological timeline of events required when AICTE inpsection happens.</li>
                 </ol>
             </li>
             <li><span class="main-heading">Methodology / Planning of work</span>
@@ -398,46 +401,40 @@
                 <ol>
                     <li class="sub-heading"> Identification of need
                         <span class="sub-heading">existing system</span>
-                        <p>In the existing manual system of leave management in educational 
-                        institutions, if the members of the faculty need to apply for a 
-                        leave, they are supposed  to submit a leave application to the HOD 
-                        concerned. After receiving consent from the HOD concerned, the 
-                        applicant needs to submit the leave application to the principal for 
-                        further approval. If the HOD or the Principal is not, then the 
-                        member of faculty can’t get consent for their leave application. 
-                        Also the retrieval of information like the number f leave available 
-                        becomes a cumbersome task as it requires scanning of the entire 
-                        record.
+                        <p>In the current system whenever an inspection body such 
+                            as AICTE requires account of all join-effort put-in by 
+                            students and college body, the faculties circulate a spreadsheet to create a 
+                            list. The spreadsheet is juggled department-to-department. 
+                            This creates a problem of keeping track of spreadsheet updations. The 
+                            next problem faced is with data entry, for which faculties ask 
+                            students to give a note on relevant events hosted by their 
+                            department or their participation in off-campus events.
                         </p>
                         
                         <li class="sub-heading">Limitation of Existing system   
                             <ol class="roman-list">
-                                <li>It requires a lot of efforts.</li>
-                                <li>It consume more time.</li>
-                                <li>It requires a lot of paper works.</li>
-                                <li>No security for data.</li>
-                                <li>Unavailability of required authorities.</li>
-                                <li>Report generation is complicated.</li>
+                                <li>It consume a lot of time.</li>
+                                <li>It requires a tracking updates.</li>
+                                <li>No security for data. Anyone who has 
+                                    access can modify or delete.
+                                </li>
+                                <li>Spreadsheet is not permanent. 
+                                    It is forgotten or lost after some time.
+                                </li> 
+                                
                             </ol>
                         </li>
                     </li>
                     <li>
                         <span class="sub-heading">Proposed System</span>
-                        <p>By considering the pros and cons of the existing system, this 
-                        application has been developed to cover all the features and 
-                        overcomes the cons of the existing system. In the proposed system of 
-                        Online Leave Management System, the registered members of faculty 
-                        can simply generates a leave request anywhere and anytime providing 
-                        the required details. The leave request thus generated is sent to 
-                        the HOD concerned for consideration which can be approved or 
-                        rejected. In case of approval by the HOD concerned. The leave 
-                        request is automatically forwarded to the Principal can access he 
-                        leave applications delivered to them anywhere and anytime. Also the 
-                        members of faculty can view their leave account without going 
-                        through the entire record. By availing the benefits of this app, 
-                        members of faculty and HOD can generate leave requests and get them 
-                        approved even in the case of absence of required authorities. This 
-                        project enhances security to the leave records of faculties.  
+                        <p>To solve such trivial yet cumbersome/inefficient problems, we created
+                            an online web application which keeps track of all the events in
+                            chronological order. This project is titled "Acropolis Event 
+                            Timeline". Any user can view all the recorded events. To edit or
+                            create a new post in the timeline user need to authenticate 
+                            himself/herself. Once authenticated, the user can create, update, or
+                            delete timeline posts. This data is stored in a local database and
+                            so is permanently modified.
                         </p>
                     </li>
                 </ol>
@@ -447,30 +444,28 @@
 
     <section class="page">
         <figure>
-            <img src="img/faculty-login-view.png" alt="Wireframe of faculty login">
-            <figcaption>Faculty login</figcaption>
+            <img class="long-img" src="img/timeline-wireframe.jpg" 
+                alt="Wireframe of Timeline">
+            <figcaption>Timeline Wireframe</figcaption>
         </figure>
     </section>
     <section class="page">
         <figure>
-            <img src="img/hod-approval-view.png" alt="Wireframe of application approval page">
-            <figcaption>Approval page (HOD)</figcaption>
+            <img class="long-img" src="img/admin-page-wireframe-1.png" 
+                alt="Wireframe of admin view 1">
+            <figcaption>Admin view</figcaption>
         </figure>
     </section>
     <section class="page">
         <figure>
-            <img src="img/admin-data-view.png" alt="Wireframe of leaves account for Admin">
-            <figcaption>Leave account page (Admin)</figcaption>
-        </figure>
-    </section>
-    <section class="page">
-        <figure>
-            <img src="img/admin-details-view.png" alt="Wireframe of faculty details page">
-            <figcaption>Faculty details</figcaption>
+            <img class="long-img" src="img/admin-page-wireframe-2.png" 
+                alt="Wireframe of admin view 2">
+            <figcaption>Admin view when hovered</figcaption>
         </figure>
     </section>
 
-    <section class="page">
+<!--
+     <section class="page">
         <figure>
             <img src="img/dfd-level-0.png" alt="Data-flow diagram level-0">
             <figcaption>Data-flow diagram level-0</figcaption>
@@ -488,6 +483,7 @@
             <figcaption>Data-flow diagram level-2</figcaption>
         </figure>
     </section>
+-->
 
     <section class="page">
         <h2>Testing</h2>
@@ -497,18 +493,13 @@
             <ol>
                 <li>Logging-in with correct credentials</li>
                 <li>Logging-in with incorrect credentials</li>
-                <li>Applying for Leave</li>
-                <li>What if the number of leave days entered is 0 or negative while 
-                    applying?</li>
-                <li>What if the required number of a leave type is not available 
-                    while applying?</li>
-                <li>Approving a Leave Request (deducts the number of leave days applied for)</li>
-                <li>Rejecting a Leave Request</li>
-                <li>What if the given number of the request's leave type is not available
-                    while approving?</li>
-                <li>What if there are multiple leave requests (in pending) of same 
-                    leave type from the same user, that are individually under limit of the 
-                    available leaves but together they exceed it?</li>
+                <li>Creating a post</li>
+                <li>What if the user did not provide title or date?</li>
+                <li>What if the user provides excessive amount of images</li>
+                <li>Editing a post</li>
+                <li>Deletion of images</li>
+                <li>Deletion of posts</li>
+                <li>What if there are no posts to display in timeline?</li>
             </ol>       
         </ol>
     </section>
@@ -524,10 +515,12 @@
             <li class="main-heading">Future Scope</li>
             <ol>
                 <li>Deployment over server.</li>
-                <li>Secure login for admin page and HOD page.</li>
-                <li>Government holidays could be fetched from a calendar API 
-                    and leaves like Optional leave can be taken care in automated
-                    fashion.</li>
+                <li>Secure login for admin.</li>
+                <li>Pagination and load more posts on page scroll.</li>
+                <li>Storing and sending compressed images.</li>
+                <li>Optimized image loading. Sending images of best quality
+                    appropriate for device screen size.
+                </li>
             </ol>
         </ol>
     </section>
